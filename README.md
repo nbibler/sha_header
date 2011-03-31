@@ -30,12 +30,12 @@ And, the following response is received:
 
     HTTP/1.1 200 OK 
     Content-Type: text/html; charset=utf-8
-    Etag: "25ec427afba8daa376f309559b1b3c5c"
+    ETag: "25ec427afba8daa376f309559b1b3c5c"
     Cache-Control: max-age=0, private, must-revalidate
-    X-Git-Sha: 8c139c519c731be597d0c37a6e5ce46a27bab174
-    X-Ua-Compatible: IE=Edge
+    X-Git-SHA: 8c139c519c731be597d0c37a6e5ce46a27bab174
+    X-UA-Compatible: IE=Edge
     X-Runtime: 0.120340
     Content-Length: 0
-    Server: WEBrick/1.3.1 (Ruby/1.9.2/2011-02-18)
-    Date: Thu, 31 Mar 2011 17:34:17 GMT
     Connection: Keep-Alive
+
+(Notice the `X-Git-SHA` header)
