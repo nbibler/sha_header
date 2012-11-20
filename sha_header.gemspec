@@ -5,6 +5,7 @@ require 'sha_header/version'
 Gem::Specification.new do |s|
   s.name        = 'sha_header'
   s.version     = SHAHeader::VERSION
+  s.license     = 'MIT'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Nathaniel Bibler']
   s.email       = ['gem@nathanielbibler.com']
