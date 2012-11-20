@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = 'sha_header'
 
-  s.add_dependency 'rails', '~>3.0.0'
+  s.add_dependency 'railties', '~>3.0'
 
   s.add_development_dependency 'rspec', '~>2.5.0'
   s.add_development_dependency 'fakefs', '~>0.3.0'

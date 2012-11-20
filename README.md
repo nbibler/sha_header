@@ -8,7 +8,7 @@ response headers.
 ## Compatibility
 
 The SHAHeader gem is both Ruby 1.8.7 and 1.9.2 compatible.  Currently,
-it is compatible with Rails 3.0.X.
+it is compatible with Rails 3.x.
 
 ## Installation
 
