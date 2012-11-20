@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe SHAHeader::Middleware do
-  include FakeFS::SpecHelpers
-
   let(:parent_app) {lambda { |env| [200, {'Content-Type' => 'text/plain'}, ['Hello']] }}
   let(:middleware) { SHAHeader::Middleware.new(parent_app) }
   let(:env) { Rack::MockRequest.env_for('/hello') }
@@ -21,14 +19,14 @@ describe SHAHeader::Middleware do
       it { should == 'ABCDEFG' }
     end
 
-    context 'with a REVISION file' do
-      use_fakefs
+    context 'with a REVISION file', :fakefs do
+      use_fakefs(self) do
+        let(:path) { Rails.root.join('REVISION') }
+        before(:each) { File.open(path, 'w') { |file| file.write 'HIJKLMNO' }}
+        after(:each) { File.delete(path) }
 
-      let(:path) { Rails.root.join('REVISION') }
-      before(:each) { File.open(path, 'w') { |file| file.write 'HIJKLMNO' }}
-      after(:each) { File.delete(path) }
-
-      it { should == 'HIJKLMNO' }
+        it { should == 'HIJKLMNO' }
+      end
     end
 
     context 'when querying git' do

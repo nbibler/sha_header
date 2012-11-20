@@ -1,10 +1,7 @@
 require 'active_support/core_ext/object/blank'
-require 'active_support/memoizable'
 
 module SHAHeader
   class Middleware
-    extend ::ActiveSupport::Memoizable
-
     def initialize(app, options = {})
       @app = app
     end
@@ -28,14 +25,15 @@ module SHAHeader
     end
 
     def current_git_sha
-      if revision_present?
-        File.read(::Rails.root.join('REVISION')).strip
-      elsif on_heroku?
-        ENV['COMMIT_HASH'].strip
-      else
-        `cd "#{::Rails.root}" && git rev-parse HEAD 2>/dev/null`.strip
+      @current_git_sha ||= begin
+        if revision_present?
+          File.read(::Rails.root.join('REVISION')).strip
+        elsif on_heroku?
+          ENV['COMMIT_HASH'].strip
+        else
+          `cd "#{::Rails.root}" && git rev-parse HEAD 2>/dev/null`.strip
+        end
       end
     end
-    memoize :current_git_sha
   end
 end
