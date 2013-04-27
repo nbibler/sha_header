@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nbibler/sha_header.png?branch=master)](https://travis-ci.org/nbibler/sha_header)
+
 # SHAHeader
 
 SHAHeader is a simple Rack middleware gem for Rails 3.  When required, it
