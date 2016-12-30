@@ -10,13 +10,13 @@ Gem::Specification.new do |s|
   s.authors     = ['Nathaniel Bibler']
   s.email       = ['gem@nathanielbibler.com']
   s.homepage    = 'https://github.com/nbibler/sha_header'
-  s.summary     = %q{Add a header to the response of your Rails 3 application containing the current commit SHA.}
-  s.description = %q{This library adds a new, custom X-Git-SHA header to your Rails 3 application's response which contains the SHA hash that your application is currently running.}
+  s.summary     = %q{Add a header to the response of your Rails 3+ application containing the current commit SHA.}
+  s.description = %q{This library adds a new, custom X-Git-SHA header to your Rails 3+ application's response which contains the SHA hash that your application is currently running.}
 
-  s.add_dependency 'railties', '~>3.0'
+  s.add_dependency 'railties', '>= 3.0'
 
-  s.add_development_dependency 'rspec', '~>2.5'
-  s.add_development_dependency 'fakefs', '~>0.4'
+  s.add_development_dependency 'rspec', '2.13.0'
+  s.add_development_dependency 'fakefs', '0.4.2'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
