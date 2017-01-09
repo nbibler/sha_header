@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.org/nbibler/sha_header.png?branch=master)](https://travis-ci.org/nbibler/sha_header)
 
+:construction: This library has been replaced by [Rapporteur][]. :construction:
+
+Rapporteur provides similar functionality, although rather than injecting the
+revision information into every request as sha_header does, it provides a
+status endpoint where you can provide multiple server data points (Git
+revision, system time, uptime, whatever).
+
 # SHAHeader
 
 SHAHeader is a simple Rack middleware gem for Rails 3.  When required, it
@@ -41,3 +48,5 @@ And, the following response is received:
     Connection: Keep-Alive
 
 (Notice the `X-Git-SHA` header)
+
+[Rapporteur]: https://rubygems.org/gems/rapporteur
