@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nathaniel Bibler"]
   spec.email         = ["gem@nathanielbibler.com"]
 
-  spec.summary       = %q{Add a header to the response of your Rails 3 application containing the current commit SHA.}
-  spec.description   = %q{This library adds a new, custom X-Git-SHA header to your Rails 3 application's response which contains the SHA hash that your application is currently running.}
+  spec.summary       = %q{Add a header to the response of your Rails application containing the current commit SHA.}
+  spec.description   = %q{This library adds a new, custom X-Git-SHA header to your Rails application's response which contains the SHA hash that your application is currently running.}
   spec.homepage      = "https://github.com/nbibler/sha_header"
   spec.license       = "MIT"
 

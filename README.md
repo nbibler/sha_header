@@ -16,14 +16,16 @@ response headers.
 
 ## Compatibility
 
-The SHAHeader gem is Ruby 1.8.7, 1.9.2, 1.9.3, and 2.0.0 compatible and it is
-compatible with Rails 3.x.
+The SHAHeader gem is compatible with:
+
+* Ruby 2.1 through 2.4, and
+* Rails 3.2 through 5.0.
 
 ## Installation
 
-In Rails 3, modify your `Gemfile` to add the following line:
+In Rails, modify your `Gemfile` to add the following line:
 
-    gem 'sha_header'
+    gem 'sha_header', '~> 1.0'
 
 That's it.  It is distributed with a `Railtie` to instruct Rails on how
 to set it up, so no other coding is required.
