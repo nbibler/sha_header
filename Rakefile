@@ -1,12 +1,6 @@
-require 'bundler'
-Bundler::GemHelper.install_tasks
+require "bundler/gem_tasks"
+require "rspec/core/rake_task"
 
-require 'rake'
-require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
-
-desc "Run all examples"
-RSpec::Core::RakeTask.new('spec') do |t|
-  t.pattern = 'spec/**/*_spec.rb'
-end

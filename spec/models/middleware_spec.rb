@@ -20,7 +20,7 @@ describe SHAHeader::Middleware do
     end
 
     context 'with a REVISION file', :fakefs do
-      use_fakefs(self) do
+      use_fakefs(self, with: :each) do
         let(:path) { Rails.root.join('REVISION') }
         before(:each) { File.open(path, 'w') { |file| file.write 'HIJKLMNO' }}
         after(:each) { File.delete(path) }

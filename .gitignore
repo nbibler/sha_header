@@ -1,8 +1,11 @@
-*.gem
-.bundle
-Gemfile.lock
-pkg/*
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
 
-.rvmrc
-.ruby-version
-.ruby-gemset
+/.ruby-version
