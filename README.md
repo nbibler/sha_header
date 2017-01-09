@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/nbibler/sha_header.png?branch=master)](https://travis-ci.org/nbibler/sha_header)
-
 :construction: This library has been replaced by [Rapporteur][]. :construction:
 
 Rapporteur provides similar functionality, although rather than injecting the
@@ -8,6 +6,9 @@ status endpoint where you can provide multiple server data points (Git
 revision, system time, uptime, whatever).
 
 # SHAHeader
+
+[![Gem Version](http://img.shields.io/gem/v/sha_header.svg?style=flat)](http://rubygems.org/gems/sha_header)
+[![Build Status](http://img.shields.io/travis/nbibler/sha_header/master.svg?style=flat)](https://travis-ci.org/nbibler/sha_header)
 
 SHAHeader is a simple Rack middleware gem for Rails 3.  When required, it
 will instruct Rails to automatically insert its middleware into the Rack
