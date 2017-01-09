@@ -1,5 +1,22 @@
 before_install: gem install bundler -v 1.13.7
+cache: bundler
+gemfile:
+  - gemfiles/railties_3.2.gemfile
+  - gemfiles/railties_4.x.gemfile
+  - gemfiles/railties_5.x.gemfile
 language: ruby
+matrix:
+  allow_failures:
+    # json 1.8.3 fails to build under 2.4.0
+    - rvm: 2.4.0
+      gemfile: gemfiles/railties_3.2.gemfile
+    - rvm: 2.4.0
+      gemfile: gemfiles/railties_4.x.gemfile
+  exclude:
+    # rails 5 requires Ruby 2.2.2+
+    - rvm: 2.1.10
+      gemfile: gemfiles/railties_5.x.gemfile
+  fast_finish: true
 rvm:
   - 2.1.10
   - 2.2.6

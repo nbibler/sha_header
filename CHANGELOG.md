@@ -2,7 +2,7 @@
 
 ## [HEAD][head] / unreleased
 
-* No significant changes.
+* Widen supported Rails version to include 3.2 to 5.0.
 
 ## [v1.0.0][v1.0.0] / 2013-04-27
 
