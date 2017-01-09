@@ -9,14 +9,14 @@ describe SHAHeader::Middleware do
     subject { middleware.call(env)[1]['X-Git-SHA'] }
 
     it 'is added' do
-      should be_present
+      is_expected.to be_present
     end
 
     context 'on Heroku' do
       before(:each) { ENV['COMMIT_HASH'] = 'ABCDEFG'; ENV['HEROKU_UPID'] = '1' }
       after(:each) { ENV['COMMIT_HASH'] = ENV['HEROKU_UPID'] = nil }
 
-      it { should == 'ABCDEFG' }
+      it { is_expected.to eq('ABCDEFG') }
     end
 
     context 'with a REVISION file', :fakefs do
@@ -25,16 +25,16 @@ describe SHAHeader::Middleware do
         before(:each) { File.open(path, 'w') { |file| file.write 'HIJKLMNO' }}
         after(:each) { File.delete(path) }
 
-        it { should == 'HIJKLMNO' }
+        it { is_expected.to eq('HIJKLMNO') }
       end
     end
 
     context 'when querying git' do
       it 'returns the current HEAD SHA' do
-        middleware.should_receive(:`).
+        expect(middleware).to receive(:`).
           with(%r{git rev-parse HEAD}).
           and_return('XYZ')
-        should == 'XYZ'
+        is_expected.to eq('XYZ')
       end
     end
   end
