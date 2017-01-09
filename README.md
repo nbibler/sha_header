@@ -10,7 +10,7 @@ revision, system time, uptime, whatever).
 [![Gem Version](http://img.shields.io/gem/v/sha_header.svg?style=flat)](http://rubygems.org/gems/sha_header)
 [![Build Status](http://img.shields.io/travis/nbibler/sha_header/master.svg?style=flat)](https://travis-ci.org/nbibler/sha_header)
 
-SHAHeader is a simple Rack middleware gem for Rails 3.  When required, it
+SHAHeader is a simple Rack middleware gem for Rails.  When required, it
 will instruct Rails to automatically insert its middleware into the Rack
 stack and inject your current git SHA hash into all of your dynamic
 response headers.
