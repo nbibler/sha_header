@@ -20,7 +20,7 @@ response headers.
 The SHAHeader gem is compatible with:
 
 * Ruby 2.1 through 2.4, and
-* Rails 3.2 through 5.0.
+* Rails 3.2 through 5.1.
 
 ## Installation
 
@@ -40,7 +40,7 @@ application has added the above `Gemfile` line.  Using curl:
 
 And, the following response is received:
 
-    HTTP/1.1 200 OK 
+    HTTP/1.1 200 OK
     Content-Type: text/html; charset=utf-8
     ETag: "25ec427afba8daa376f309559b1b3c5c"
     Cache-Control: max-age=0, private, must-revalidate

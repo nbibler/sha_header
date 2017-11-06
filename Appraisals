@@ -7,5 +7,5 @@ appraise "railties-4.x" do
 end
 
 appraise "railties-5.x" do
-  gem "railties", "~> 5.0"
+  gem "railties", "~> 5.1"
 end
