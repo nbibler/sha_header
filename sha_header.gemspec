@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'railties', '>= 3.2', '< 5.3'
 
   spec.add_development_dependency "appraisal", "~> 2.0"
-  spec.add_development_dependency "bundler", "~> 1.13"
+  spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency 'fakefs', '~>0.4', '>= 0.4.3'
   spec.add_development_dependency "rake", "~> 12.0"
   spec.add_development_dependency "rspec", "~> 3.0"
