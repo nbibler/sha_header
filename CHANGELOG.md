@@ -7,6 +7,10 @@
 
 * No significant changes.
 
+## [v1.1.1][] / 2019-03-26
+
+* Widen supported Rails version to include 3.2 to 5.2.
+
 ## [v1.1.0][] / 2017-01-08
 
 * Widen supported Rails version to include 3.2 to 5.0.
@@ -23,4 +27,5 @@
 [v0.0.4]: https://github.com/nbibler/sha_header/compare/v0.0.3...v0.0.4
 [v1.0.0]: https://github.com/nbibler/sha_header/compare/v0.0.4...v1.0.0
 [v1.1.0]: https://github.com/nbibler/sha_header/compare/v1.0.0...v1.1.0
-[HEAD]: https://github.com/nbibler/sha_header/compare/v1.1.0...master
+[v1.1.1]: https://github.com/nbibler/sha_header/compare/v1.1.0...v1.1.1
+[HEAD]: https://github.com/nbibler/sha_header/compare/v1.1.1...master
