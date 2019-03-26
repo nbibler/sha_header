@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe SHAHeader::Middleware do
-  let(:parent_app) {lambda { |env| [200, {'Content-Type' => 'text/plain'}, ['Hello']] }}
+  let(:parent_app) { lambda { |env| [200, { 'Content-Type' => 'text/plain' }, ['Hello']] } }
   let(:middleware) { SHAHeader::Middleware.new(parent_app) }
   let(:env) { Rack::MockRequest.env_for('/hello') }
 
@@ -22,7 +24,7 @@ describe SHAHeader::Middleware do
     context 'with a REVISION file', :fakefs do
       use_fakefs(self, with: :each) do
         let(:path) { Rails.root.join('REVISION') }
-        before(:each) { File.open(path, 'w') { |file| file.write 'HIJKLMNO' }}
+        before(:each) { File.open(path, 'w') { |file| file.write 'HIJKLMNO' } }
         after(:each) { File.delete(path) }
 
         it { is_expected.to eq('HIJKLMNO') }

@@ -1,4 +1,6 @@
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "sha_header"
+# frozen_string_literal: true
 
-Dir[File.expand_path("../support/*.rb", __FILE__)].each { |f| require f }
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'sha_header'
+
+Dir[File.expand_path('../support/*.rb', __FILE__)].each { |f| require f }
