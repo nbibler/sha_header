@@ -7,20 +7,20 @@ jobs:
       vmImage: 'Ubuntu-16.04'
     strategy:
       matrix:
-        ruby245_railties42:
-          rubyVersion: '2.4.5'
+        ruby244_railties42:
+          rubyVersion: '2.4.4'
           gemfile: 'railties_4.2'
-        ruby245_railties50:
-          rubyVersion: '2.4.5'
+        ruby244_railties50:
+          rubyVersion: '2.4.4'
           gemfile: 'railties_5.0'
-        ruby245_railties51:
-          rubyVersion: '2.4.5'
+        ruby244_railties51:
+          rubyVersion: '2.4.4'
           gemfile: 'railties_5.1'
-        ruby245_railties52:
-          rubyVersion: '2.4.5'
+        ruby244_railties52:
+          rubyVersion: '2.4.4'
           gemfile: 'railties_5.2'
-        ruby245_railties5x:
-          rubyVersion: '2.4.5'
+        ruby244_railties5x:
+          rubyVersion: '2.4.4'
           gemfile: 'railties_5.x'
     steps:
     - task: UseRubyVersion@0
