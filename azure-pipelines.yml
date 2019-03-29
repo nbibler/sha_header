@@ -1,23 +1,39 @@
-# Ruby
-# Package your Ruby project.
-# Add steps that install rails, analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/ruby
-
 trigger:
 - master
 
-pool:
-  vmImage: 'Ubuntu-16.04'
+jobs:
+  - job: "sha_header"
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    strategy:
+      matrix:
+        ruby245_railties42:
+          rubyVersion: '2.4.5'
+          gemfile: 'railties_4.2'
+        ruby245_railties50:
+          rubyVersion: '2.4.5'
+          gemfile: 'railties_5.0'
+        ruby245_railties51:
+          rubyVersion: '2.4.5'
+          gemfile: 'railties_5.1'
+        ruby245_railties52:
+          rubyVersion: '2.4.5'
+          gemfile: 'railties_5.2'
+        ruby245_railties5x:
+          rubyVersion: '2.4.5'
+          gemfile: 'railties_5.x'
+    steps:
+    - task: UseRubyVersion@0
+      inputs:
+        versionSpec: '$(rubyVersion)'
 
-steps:
-- task: UseRubyVersion@0
-  inputs:
-    versionSpec: '>= 2.5'
+    - script: BUNDLE_GEMFILE=$PWD/gemfiles/$(gemfile).gemfile
+      displayName: 'set BUNDLE_GEMFILE'
 
-- script: |
-    gem install bundler
-    bundle install --retry=3 --jobs=4
-  displayName: 'bundle install'
+    - script: |
+        gem install bundler -v 2.0.1
+        bundle install --retry=3 --jobs=4
+      displayName: 'bundle install'
 
-- script: bundle exec rake
-  displayName: 'bundle exec rake'
+    - script: bundle exec rake
+      displayName: 'bundle exec rake'
