@@ -5,7 +5,11 @@
 
 ## [HEAD][] / unreleased
 
-* No significant changes.
+* Widen supported Rails version to include 3.2 to 6.0. However, explicit
+  testing of [unmaintained Rails
+  versions](https://guides.rubyonrails.org/maintenance_policy.html) are no
+  longer being performed and compatibility is not guaranteed for those affected
+  versions.
 
 ## [v1.1.1][] / 2019-03-26
 
