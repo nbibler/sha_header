@@ -7,8 +7,8 @@ revision, system time, uptime, whatever).
 
 # SHAHeader
 
-[![Gem Version](http://img.shields.io/gem/v/sha_header.svg?style=flat)](http://rubygems.org/gems/sha_header)
-[![Build Status](http://img.shields.io/travis/nbibler/sha_header/master.svg?style=flat)](https://travis-ci.org/nbibler/sha_header)
+[![Gem Version](https://badge.fury.io/rb/sha_header.svg)](http://rubygems.org/gems/sha_header)
+[![Build Status](https://github.com/nbibler/sha_header/workflows/Tests/badge.svg)](https://github.com/nbibler/sha_header/actions)
 
 SHAHeader is a simple Rack middleware gem for Rails.  When required, it
 will instruct Rails to automatically insert its middleware into the Rack
