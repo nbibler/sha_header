@@ -5,6 +5,10 @@
 
 ## [HEAD][] / unreleased
 
+* No significant changes.
+
+## [v1.2.0][] / 2020-04-04
+
 * Widen supported Rails version to include 3.2 to 6.0. However, explicit
   testing of [unmaintained Rails
   versions](https://guides.rubyonrails.org/maintenance_policy.html) are no
@@ -32,4 +36,5 @@
 [v1.0.0]: https://github.com/nbibler/sha_header/compare/v0.0.4...v1.0.0
 [v1.1.0]: https://github.com/nbibler/sha_header/compare/v1.0.0...v1.1.0
 [v1.1.1]: https://github.com/nbibler/sha_header/compare/v1.1.0...v1.1.1
-[HEAD]: https://github.com/nbibler/sha_header/compare/v1.1.1...master
+[v1.2.0]: https://github.com/nbibler/sha_header/compare/v1.1.1...v1.2.0
+[HEAD]: https://github.com/nbibler/sha_header/compare/v1.2.0...master
