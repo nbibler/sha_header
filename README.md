@@ -20,7 +20,7 @@ response headers.
 The SHAHeader gem is compatible with:
 
 * Ruby 2.4, 2.5, and 2.6 and
-* Rails 4.2, 5.1, and 5.2.
+* Rails 5.2 and 6.0.
 
 This library may continue to be compatible with older versions (Ruby 2.1+,
 Rails 3.2+), however those versions have been end-of-life'd and are no longer
